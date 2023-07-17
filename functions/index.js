@@ -10,8 +10,8 @@ app.use(express.json())
 
 
 //routes
-app.post("/signup")    
-app.post("/login")
+app.post("/signup", signup)    
+app.post("/login", login)
 
 
 
