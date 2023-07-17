@@ -1,7 +1,7 @@
 import express from 'express'
 import { onRequest } from "firebase-functions/v2/https"
 import cors from 'cors'
-import { signup, login } from './src/users.js'
+import { signup, login, getProfile } from './src/users.js'
 
 const app = express()
 
@@ -16,7 +16,7 @@ app.post("/login", login)
 
 
 //protected (authenticated users only)
-// app.get("/profile")
+ app.get("/profile", getProfile)
 // app.patch("/profile")
 
 
